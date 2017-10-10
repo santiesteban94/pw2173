@@ -1,0 +1,37 @@
+body
+{
+    font-size: 16px; /*1em*/
+    max-width: 1078px; 
+    min-width: 1078px;
+
+}
+header nav
+{
+	background: orange;
+}
+header nav ul li
+{
+	display: inline-block;
+	padding-left: 20px;
+	color: white;
+}
+button
+{
+	border: 1px solid black;
+	border-radius: 150px;
+	color: white;
+	padding-left:  2.2px;
+	
+}
+.colorgris
+{
+	color: #B2B2B2 ;
+}
+.nito
+{
+	font-weight: bold;
+}
+.grisgrande
+{
+	font-size: 1.5em;
+} 
