@@ -1,0 +1,51 @@
+body{
+	font-size: 16px; /*1em*/
+	max-width: 1024px; 
+	margin: 0 auto; 
+}
+
+header img{
+	width: 158x;
+	margin-top: -5px;
+	margin-right: -50px;
+}
+header {
+	background: #000000;
+	max-width: 1024px; 
+
+	font-size: 12px; 
+}
+header nav ul li
+{
+	color: #7E8AA2;
+}
+.blancogrande{
+	font-size: 2.5em;
+
+}
+.nito
+{
+	font-weight: bold;
+}
+#primeraseccion{
+
+}
+#secc01art02{
+	background: green;
+	color: white;
+}
+#secc01art03{
+	background: #54524E;
+}
+#secc01art04{
+	background: red;
+	color: white;
+
+}
+#secc01art05{
+	background: #E1E6FA;
+
+}
+#tercerseccion article {
+	color: white;
+}

@@ -1,0 +1,46 @@
+var a = 1
+undefined
+a
+1
+var b = 2
+undefined
+b
+2
+a+b
+3
+Function suma(i,j) {return i+j;}
+VM250:1 Uncaught SyntaxError: Unexpected identifier
+Function suma(i,j){return i+j;}
+VM253:1 Uncaught SyntaxError: Unexpected identifier
+Function suma(i,j) {return i+j;}
+VM255:1 Uncaught SyntaxError: Unexpected identifier
+Function suma(i,j){return i+j;}
+VM260:1 Uncaught SyntaxError: Unexpected identifier
+function suma(i,j){return i+j;}
+undefined
+suma
+ƒ suma(i,j){return i+j;}
+var suma2 = function(k,l){return k+l;}
+undefined
+suma2
+ƒ (k,l){return k+l;}
+suma(8,9)
+17
+alert("hola JavaScript");
+undefined
+for(var i=0;i<50;i++){alert("jajajajaja");}
+undefined
+document.write("Este texto sustituye la página");
+undefined
+var confirmacion = confirm("¿Está seguro de borrar esta vaina?");
+undefined
+var confirmacion = confirm("¿Está seguro de borrar esta vaina?");
+undefined
+confirm("¿Está seguro de borrar esta vaina?");
+false
+confirm("¿Está seguro de borrar esta vaina?");
+true
+var nombre = prompt("Escribe tu nombre");
+undefined
+nombre
+"jorge santi"
