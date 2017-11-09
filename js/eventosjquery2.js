@@ -1,17 +1,21 @@
 var inicia = function(){
-	//JSON = JavaScript Object Notation
-	$.ajax({
+	var nuevo = function(){
+		$.ajax({
   url: 'https://randomuser.me/api/',
   dataType: 'json',
   success: function(data) {
   	//alert(data.results[0].name.first+" "+data.results[0].name.last);
    // console.log(data);
-   $("nombre").html(data.results[0].name.first+" "+
-   	                data.results[0].name.last);
+   $("#nombre").html("<marquee>nombre:  "+data.results[0].name.first+" "+
+   	                 data.results[0].name.last+"</marquee>");
    $("#foto").attr("src",data.results[0].picture.large);
   }
 });
+	}
+	//JSON = JavaScript Object Notation
+	
      //alert("Lista la página")
+     $("#btnNuevo").on("click",nuevo);
 
 }
 
