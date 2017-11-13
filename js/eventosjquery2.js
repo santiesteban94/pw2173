@@ -6,10 +6,15 @@ var inicia = function(){
   success: function(data) {
   	//alert(data.results[0].name.first+" "+data.results[0].name.last);
    // console.log(data);
-   $("#nombre").html("<marquee>nombre:  "+data.results[0].name.first+" "+
-   	                 data.results[0].name.last+"</marquee>");
+   $("#nombre").html("Hola, mi nombre es "+data.results[0].name.first+" "+
+   	                 data.results[0].name.last);
    $("#foto").attr("src",data.results[0].picture.large);
+
+   $("#email").html("my email es: "+data.results[0].email);
+    $("#cumpleaños").html("mi cumpleaños es: "+data.results[0].dob);
+    $("#address").html("my address es: "+data.results[0].street+" "+ data.results[0].city);
   }
+
 });
 	}
 	//JSON = JavaScript Object Notation
