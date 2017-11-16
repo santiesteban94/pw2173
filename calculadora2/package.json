@@ -1,20 +1,22 @@
 {
   "name": "calculadora2",
   "version": "1.0.0",
-  "description": "calculadora electron",
+  "description": "Calculadora electron",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "empaqueta": "electron-packager . Calculadora --overwrite --icon=calculadora.icns --asar",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "Calculadora",
     "escritorio",
-    "electro"
+    "electron"
   ],
   "author": "Jorge Santiesteban",
   "license": "MIT",
   "devDependencies": {
+    "asar": "^0.14.0",
     "electron": "^1.7.9",
     "electron-packager": "^9.1.0",
     "electron-require": "^0.3.0",
