@@ -2,6 +2,19 @@ const {app, BrowserWindow}=require('electron');
 const path=require('path');
 const url=require('url');
 // const $ = require('jquery');
+// constantes para PDF
+const electron = require('electron')
+//Sistema de archivos
+const fs =require('fs')
+//Acceso al sistema operativo
+const os = require('os');
+//Para declarar una función remota
+const ipc = electron.ipcMain;
+//Acceso a la terminal-linea de comandos
+const shell = electron.shell;
+
+
+//ECMASCRIPT = 6
 let PantallaDetalle;
 //Objeto global para compartir datos
 //entre pantallas
@@ -16,7 +29,7 @@ global.infoUsuarios ={
 function muestraPantallaPrincipal(){
 	PantallaPrincipal=new BrowserWindow({width:320,height:425});
 	PantallaPrincipal.loadURL({
-		pathname: path.join(__dirname,'detalleusuarios.html'),
+		pathname: path.join(__dirname,'index.html'),
 		protocol: 'file',
 		slashes: true
 	}));
@@ -24,7 +37,27 @@ function muestraPantallaPrincipal(){
 PantallaDetalle.show();
 }
 
+//Evento para PDF (declaración)
+ipc.on('print-to-pdf',function(event){
+	const pdfPath=path.join(os.tmpdir(),'print.pdf')
+	const win=BrowserWindow.fromWebContents(event.sender)
+	win.webContents.printToPDF({},function(error,data){
+		if(error) throw error
+			fs.writeFile(pdfPath,data,function(error){})
+		if(error){
+			throw error
+		}
+		shell.openExternal('file://'+pdfPath)
+		win.close()
+	})
+});
+
 app.on('ready',muestraPantallaPrincipal)
+	// if(error){
+	// 		throw error
+	// 	}
+	// 	shell.openExternal('file://'+pdfPath)
+	// 	win.close()
 // function datos(nombre,genero,foto,direccion,telefono)
 // {
 // 	this.nombre    = nombre;
